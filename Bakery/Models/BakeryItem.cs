@@ -2,6 +2,10 @@ namespace Bakery.Models
 {
 	public abstract class BakeryItem
 	{
-		public int BasePrice { get; set; }
+		protected int _basePrice;
+		public int BasePrice 
+		{ 
+			get { return _basePrice; }
+		}
 	}
 }

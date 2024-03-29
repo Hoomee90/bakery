@@ -4,7 +4,7 @@ namespace Bakery.Models
 	{
 		public Pastry()
 		{
-			BasePrice = 2;
+			_basePrice = 2;
 		}
 	}
 }
