@@ -1,9 +1,7 @@
 namespace Bakery.Models
 {
-  public class Bread
+  public class Bread : BakeryItem
   {
-    public int BasePrice {get; }
-		
 		public Bread()
 		{
 			BasePrice = 5;
