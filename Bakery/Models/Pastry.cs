@@ -2,9 +2,10 @@ namespace Bakery.Models
 {
 	public class Pastry : BakeryItem
 	{
-		public Pastry()
+		public Pastry(int amount)
 		{
 			_basePrice = 2;
+			Amount = amount;
 		}
 	}
 }

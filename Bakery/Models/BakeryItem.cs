@@ -7,5 +7,6 @@ namespace Bakery.Models
 		{ 
 			get { return _basePrice; }
 		}
+		public int Amount { get; set; }
 	}
 }
