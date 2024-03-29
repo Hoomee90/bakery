@@ -2,6 +2,11 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    // Business Logic goes here.
-  }
+    public int BasePrice {get; }
+		
+		public Bread()
+		{
+			BasePrice = 5;
+		}
+	}
 }
