@@ -39,5 +39,13 @@ namespace Bakery.Tests
 			newPastry.Amount = newAmount;
 			Assert.AreEqual(newAmount, newPastry.Amount);
 		}
+		
+		[TestMethod]
+		public void GetFreeEvery_ReturnsFreeEvery_Int()
+		{
+			Pastry newPastry = new(0);
+			int result = newPastry.FreeEvery;
+			Assert.AreEqual(4, result);
+		}
 	}
 }

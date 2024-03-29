@@ -16,10 +16,9 @@ namespace Bakery.Tests
 		[TestMethod]
 		public void GetBasePrice_ReturnsBasePrice_Int()
 		{
-			int expected = 5;
 			Bread newBread = new(0);
 			int result = newBread.BasePrice;
-			Assert.AreEqual(expected, result);
+			Assert.AreEqual(5, result);
 		}
 		
 		[TestMethod]
@@ -38,6 +37,14 @@ namespace Bakery.Tests
 			int newAmount = 4;
 			newBread.Amount = newAmount;
 			Assert.AreEqual(newAmount, newBread.Amount);
+		}
+		
+		[TestMethod]
+		public void GetFreeEvery_ReturnsFreeEvery_Int()
+		{
+			Bread newBread = new(0);
+			int result = newBread.FreeEvery;
+			Assert.AreEqual(3, result);
 		}
 	}
 }
