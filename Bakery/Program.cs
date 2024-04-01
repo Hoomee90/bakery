@@ -65,7 +65,7 @@ namespace Bakery
 				}
 				else
 				{
-					Checkout();
+					Checkout(order.FindTotalCost());
 				}
 			}
 			else
@@ -78,13 +78,13 @@ namespace Bakery
 		
 		static void ChooseAmount(string orderType, BakeryItem previousOrder)
 		{
-			Console.WriteLine("How many orders of {0} would you like?", orderType);
+			Console.WriteLine("How many orders of {0} would you like to add to your cart?", orderType);
 			string amount = Console.ReadLine();
 			if (int.TryParse(amount, out int number))
 			{
 				BakeryItem order = orderType == "bread" ? new Bread(number) : new Pastry(number);
-				Console.WriteLine("That order will add ${0} to your total", order.FindTotalCost());
-				Checkout();
+				Console.WriteLine("That order will add ${0}", order.FindTotalCost());
+				Checkout(order.FindTotalCost() + previousOrder.FindTotalCost());
 			}
 			else
 			{
@@ -94,9 +94,11 @@ namespace Bakery
 			}
 		}
 		
-		static void Checkout()
+		static void Checkout(int cost)
 		{
-			
+			Console.WriteLine("Your total is ${0}", cost);
+			Console.WriteLine("Don't worry, we have already taken something of equal value from you");
+			Console.WriteLine("Pleasure doing business with you. Enjoy the food");
 		}
 	}
 }
