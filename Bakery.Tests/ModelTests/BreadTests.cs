@@ -46,5 +46,13 @@ namespace Bakery.Tests
 			int result = newBread.FreeEvery;
 			Assert.AreEqual(3, result);
 		}
+		
+		[TestMethod]
+		public void FindTotalCost_ReturnsCalculatedCost_Int()
+		{
+			Bread newBread = new(2);
+			int result = newBread.FindTotalCost();
+			Assert.AreEqual(10, result);
+		}
 	}
 }

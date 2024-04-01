@@ -5,5 +5,10 @@ namespace Bakery.Models
 		public abstract int BasePrice { get; }
 		public abstract int FreeEvery { get; }
 		public int Amount { get; set; }
+		
+		public int FindTotalCost()
+		{
+			return BasePrice * Amount;
+		}
 	}
 }
