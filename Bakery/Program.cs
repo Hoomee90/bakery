@@ -1,5 +1,4 @@
 using System;
-using System.ComponentModel.Design;
 using Bakery.Models;
 
 namespace Bakery
@@ -9,7 +8,7 @@ namespace Bakery
 		static void Main()
 		{
 			Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-			Console.WriteLine("Welcome to Pierre's Bakery");
+			Console.WriteLine("Welcome to The Bakery");
 			Console.Write("The freshest baked goods this side of ");
 			Console.BackgroundColor = ConsoleColor.White;
 			Console.ForegroundColor = ConsoleColor.Red;
