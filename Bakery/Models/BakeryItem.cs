@@ -1,3 +1,5 @@
+using System;
+
 namespace Bakery.Models
 {
 	public abstract class BakeryItem
@@ -8,7 +10,7 @@ namespace Bakery.Models
 		
 		public int FindTotalCost()
 		{
-			return BasePrice * Amount;
+			return (int)(BasePrice * (Amount - Math.Floor((decimal)(Amount / FreeEvery))));
 		}
 	}
 }

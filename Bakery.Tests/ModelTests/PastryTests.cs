@@ -55,5 +55,21 @@ namespace Bakery.Tests
 			int result = newPastry.FindTotalCost();
 			Assert.AreEqual(6, result);
 		}
+		
+		[TestMethod]
+		public void FindTotalCost_AdjustsForBuyOneGetOne_Int()
+		{
+			Pastry newPastry = new(7);
+			int result = newPastry.FindTotalCost();
+			Assert.AreEqual(12, result);
+		}
+		
+		[TestMethod]
+		public void FindTotalCost_WorksWithHighAmounts_Int()
+		{
+			Pastry newPastry = new(160);
+			int result = newPastry.FindTotalCost();
+			Assert.AreEqual(240, result);
+		}
 	}
 }
